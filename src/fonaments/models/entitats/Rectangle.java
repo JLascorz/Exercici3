@@ -5,6 +5,8 @@ public class Rectangle {
 //<editor-fold defaultstate="collapsed" desc="Estat: Atributs">
     private double  base;
     private double altura;
+    private Color backgroundColor;
+    private Color foregroundColor;
 //</editor-fold>
     
 //<editor-fold defaultstate="collapsed" desc="Metodes">
@@ -27,15 +29,36 @@ public class Rectangle {
                 }
             this.altura = altura;
         }
+        //Get BackgroundColor
+            public Color getBackgroundColor(){
+                return backgroundColor;
+            }
+            public void setBackgroundColor(Color backgroundColor){
+                this.backgroundColor = backgroundColor;
+            }
+            
+            //Get ForegroundColor
+            public Color getForegroundColor(){
+                return foregroundColor;
+            }
+            public void setForegroundColor(Color foregroundColor){
+                this.foregroundColor = foregroundColor;
+            }
         
     //</editor-fold>
     //<editor-fold defaultstate="collapsed" desc="Constructores">
             
             public Rectangle(double base, double altura){
+               this(new Color(Color.MAX_VALUE, Color.MAX_VALUE, Color.MAX_VALUE), new Color(Color.MIN_VALUE, Color.MIN_VALUE, Color.MIN_VALUE), base, altura);
+
+            }
+            
+            public Rectangle(Color backgroundColor, Color foregroundColor, double base, double altura){
+                this.setBackgroundColor(backgroundColor);
+                this.setForegroundColor(foregroundColor);
                 this.setBase(base);
                 this.setAltura(altura);
             }
-            
     //</editor-fold>
     //<editor-fold defaultstate="collapsed" desc="Operacions d'objecte">
         public double getArea(){

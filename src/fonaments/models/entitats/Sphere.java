@@ -5,6 +5,8 @@ public class Sphere {
 //<editor-fold defaultstate="collapsed" desc="Estat: Atributs">
     private double radi;
     private double  pi;
+    private Color backgroundColor;
+    private Color foregroundColor;
 //</editor-fold>
     
 //<editor-fold defaultstate="collapsed" desc="Metodes">
@@ -25,11 +27,32 @@ public class Sphere {
         public void setPi(double pi){
             this.pi = pi;
         }
+        //Get BackgroundColor
+            public Color getBackgroundColor(){
+                return backgroundColor;
+            }
+            public void setBackgroundColor(Color backgroundColor){
+                this.backgroundColor = backgroundColor;
+            }
+            
+            //Get ForegroundColor
+            public Color getForegroundColor(){
+                return foregroundColor;
+            }
+            public void setForegroundColor(Color foregroundColor){
+                this.foregroundColor = foregroundColor;
+            }
 
     //</editor-fold>
     //<editor-fold defaultstate="collapsed" desc="Constructores">
             
             public Sphere(double radi, double pi){
+                this(new Color(Color.MAX_VALUE, Color.MAX_VALUE, Color.MAX_VALUE), new Color(Color.MIN_VALUE, Color.MIN_VALUE, Color.MIN_VALUE), radi, Math.PI);
+
+            }
+            public Sphere(Color backgroundColor, Color foregroundColor, double radi, double pi){
+                this.setBackgroundColor(backgroundColor);
+                this.setForegroundColor(foregroundColor);
                 this.setRadi(radi);
                 this.setPi(pi);
             }

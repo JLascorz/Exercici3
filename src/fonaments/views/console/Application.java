@@ -4,6 +4,7 @@ import fonaments.models.entitats.Cercle;
 import fonaments.models.entitats.Rectangle;
 import fonaments.models.entitats.Sphere;
 import fonaments.models.entitats.Square;
+import fonaments.models.entitats.Color;
 import java.util.Scanner;
 
 public class Application {
@@ -41,13 +42,19 @@ public class Application {
     public static void Square(){
         Scanner input = new Scanner(System.in);
         double side;
-            System.out.println("Digam una mida del costat: ");
-            side = input.nextDouble();
-            Square c1 = new Square(side);
-                System.out.printf("El costat del Cuadrat es: %.2f %n", c1.getSide());
-                System.out.printf("L'area del Cuadrat es: %.2f %n", c1.getArea());
-                System.out.printf("El perimetre del Cuadrat es: %.2f %n", c1.getPerimeter());
+        Color backgroundColor = new Color(255, 255, 255);
+        Color foregroundColor = new Color(0, 0, 0);
         
+            System.out.printf("%nDigam una mida del costat: ");
+            side = input.nextDouble();
+            //Square con colores
+            Square c1 = new Square(backgroundColor, foregroundColor, side);
+                System.out.printf("%nLado: %.2f %n", c1.getSide());
+                System.out.printf("L'area del Cuadrat es: %.2f %n", c1.getArea());
+                System.out.printf("El perimetre del Cuadrat es: %.2f %n%n", c1.getPerimeter());
+                System.out.printf("Background: %s %n", c1.getBackgroundColor().toHexString());
+                System.out.printf("Foreground: %s %n%n", c1.getForegroundColor().toHexString());
+
     }
     //</editor-fold>
 
@@ -55,13 +62,17 @@ public class Application {
     public static void Cercle(){
         Scanner input = new Scanner(System.in);
         double diametro;
-        double pi = 3.141592;
-            System.out.println("Digam una mida del diametre: ");
+        double pi = Math.PI;
+        Color backgroundColor = new Color(255, 255, 255);
+        Color foregroundColor = new Color(0, 0, 0);
+            System.out.println("%nDigam una mida del diametre: ");
             diametro = input.nextDouble();
-            Cercle c2 = new Cercle(diametro, pi);
-            System.out.printf("El diametre del Cercle es: %.2f %n", c2.getDiametro());
-            System.out.printf("L'area del Cercle es: %.2f %n", c2.getArea());
-            System.out.printf("El perimetre del Cercle es: %.2f %n", c2.getPerimeter());
+            Cercle cir1 = new Cercle(backgroundColor, foregroundColor, diametro, pi);
+                System.out.printf("%nEl diametre del Cercle es: %.2f %n", cir1.getDiametro());
+                System.out.printf("L'area del Cercle es: %.2f %n", cir1.getArea());
+                System.out.printf("El perimetre del Cercle es: %.2f %n%n", cir1.getPerimeter());
+                System.out.printf("Background: %s %n", cir1.getBackgroundColor().toHexString());
+                System.out.printf("Foreground: %s %n%n", cir1.getForegroundColor().toHexString());
     }
     //</editor-fold>
     
@@ -69,16 +80,20 @@ public class Application {
     public static void Rectangle(){
         Scanner input = new Scanner(System.in);
         double base;
-        double altura = 10;
-            /* System.out.println("Digam una mida de l'altura: ");
-            altura = input.nextDouble();*/
-            System.out.println("Digam una mida de la base: ");
+        double altura;
+        Color backgroundColor = new Color(255, 255, 255);
+        Color foregroundColor = new Color(0, 0, 0);
+            System.out.println("%nDigam una mida de l'altura: ");
+            altura = input.nextDouble();
+            System.out.println("%nDigam una mida de la base: ");
             base = input.nextDouble();
-            Rectangle c3 = new Rectangle(base, altura);
-            System.out.printf("La base del Rectangle es: %.2f %n", c3.getBase());
-            System.out.printf("L'altura del Rectangle es: %.2f %n", c3.getAltura());
-            System.out.printf("L'area del Rectangle es: %.2f %n", c3.getArea());
-            System.out.printf("El perimetre del Rectangle es: %.2f %n", c3.getPerimeter());
+            Rectangle rec1 = new Rectangle(base, altura);
+                System.out.printf("%nLa base del Rectangle es: %.2f %n", rec1.getBase());
+                System.out.printf("L'altura del Rectangle es: %.2f %n", rec1.getAltura());
+                System.out.printf("L'area del Rectangle es: %.2f %n", rec1.getArea());
+                System.out.printf("El perimetre del Rectangle es: %.2f %n%n", rec1.getPerimeter());
+                System.out.printf("Background: %s %n", rec1.getBackgroundColor().toHexString());
+                System.out.printf("Foreground: %s %n%n", rec1.getForegroundColor().toHexString());
     }
     //</editor-fold>
     
@@ -86,12 +101,18 @@ public class Application {
         public static void Sphere(){
             Scanner input = new Scanner(System.in);
             double radi;
-            double pi = 3.141592;
-            System.out.println("Digam una mida del radi: ");
+            double pi = Math.PI;
+            Color backgroundColor = new Color(255, 255, 255);
+            Color foregroundColor = new Color(0, 0, 0);
+            
+            System.out.println("%nDigam una mida del radi: ");
             radi = input.nextDouble();
-            Sphere c4 = new Sphere(radi, pi);
-            System.out.printf("El radi de la Esfera es: %.2f %n", c4.getRadi());
-            System.out.printf("El volumen de la Esfera es: %.2f %n", c4.getVolumen());
+            Sphere s1 = new Sphere(radi, pi);
+                System.out.printf("El radi de la Esfera es: %.2f %n", s1.getRadi());
+                System.out.printf("El volumen de la Esfera es: %.2f %n%n", s1.getVolumen());
+                System.out.printf("Background: %s %n", s1.getBackgroundColor().toHexString());
+                System.out.printf("Foreground: %s %n%n", s1.getForegroundColor().toHexString());
+
         }
     //</editor-fold>
 //</editor-fold>
