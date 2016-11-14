@@ -1,13 +1,12 @@
 
 package fonaments.models.entitats;
 
-public class Cercle {
+public class Cercle extends Shape{
 //<editor-fold defaultstate="collapsed" desc="Estat: Atributs">
     private double diametro;
     private double  pi;
 
-    private Color backgroundColor;
-    private Color foregroundColor;
+
 //</editor-fold>
     
 //<editor-fold defaultstate="collapsed" desc="Metodes">
@@ -28,21 +27,7 @@ public class Cercle {
         public void setPi(double pi){
             this.pi = pi;
         }
-                    //Get BackgroundColor
-            public Color getBackgroundColor(){
-                return backgroundColor;
-            }
-            public void setBackgroundColor(Color backgroundColor){
-                this.backgroundColor = backgroundColor;
-            }
-            
-            //Get ForegroundColor
-            public Color getForegroundColor(){
-                return foregroundColor;
-            }
-            public void setForegroundColor(Color foregroundColor){
-                this.foregroundColor = foregroundColor;
-            }
+
 
     //</editor-fold>
     //<editor-fold defaultstate="collapsed" desc="Constructores">
@@ -52,8 +37,7 @@ public class Cercle {
             }
             
             public Cercle(Color backgroundColor, Color foregroundColor, double diametro, double pi){
-                this.setBackgroundColor(backgroundColor);
-                this.setForegroundColor(foregroundColor);
+                super(backgroundColor, foregroundColor);
                 this.setDiametro(diametro);
                 this.setPi(pi);
             }

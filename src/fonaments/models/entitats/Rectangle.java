@@ -1,12 +1,11 @@
 
 package fonaments.models.entitats;
 
-public class Rectangle {
+public class Rectangle extends Shape{
 //<editor-fold defaultstate="collapsed" desc="Estat: Atributs">
     private double  base;
     private double altura;
-    private Color backgroundColor;
-    private Color foregroundColor;
+
 //</editor-fold>
     
 //<editor-fold defaultstate="collapsed" desc="Metodes">
@@ -29,21 +28,7 @@ public class Rectangle {
                 }
             this.altura = altura;
         }
-        //Get BackgroundColor
-            public Color getBackgroundColor(){
-                return backgroundColor;
-            }
-            public void setBackgroundColor(Color backgroundColor){
-                this.backgroundColor = backgroundColor;
-            }
-            
-            //Get ForegroundColor
-            public Color getForegroundColor(){
-                return foregroundColor;
-            }
-            public void setForegroundColor(Color foregroundColor){
-                this.foregroundColor = foregroundColor;
-            }
+       
         
     //</editor-fold>
     //<editor-fold defaultstate="collapsed" desc="Constructores">
@@ -54,8 +39,7 @@ public class Rectangle {
             }
             
             public Rectangle(Color backgroundColor, Color foregroundColor, double base, double altura){
-                this.setBackgroundColor(backgroundColor);
-                this.setForegroundColor(foregroundColor);
+                super(backgroundColor, foregroundColor);
                 this.setBase(base);
                 this.setAltura(altura);
             }

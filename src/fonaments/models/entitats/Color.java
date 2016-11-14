@@ -83,10 +83,7 @@ public class Color {
         }
     //</editor-fold>
     //<editor-fold defaultstate="collapsed" desc="Metodes Estatics">
-        public static int getCounter(){
-            return counter;
-        }
-        
+
         //HEXADECIMAL
         
         public static Color fromHexString(String color){
