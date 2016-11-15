@@ -52,8 +52,7 @@ public class Application {
         //Variables Alpha/Color
         int red=60, green=50, blue=30;
         double Alpha;
-        Color backgroundColor = new Color(255, 255, 255);
-        Color foregroundColor = new Color(0, 0, 0);
+        
         
         //Mida Square
             System.out.printf("%nDigam una mida del costat: ");
@@ -61,6 +60,9 @@ public class Application {
         //Dada AlphaColor 
             System.out.printf("%nDigam un nivell de transparencia [0. Opac / 1. Transparent]: ");
             Alpha = input.nextDouble();
+            //Background i Foreground con Alpha
+            AlphaColor backgroundColor = new AlphaColor(255, 255, 255, Alpha);
+            AlphaColor foregroundColor = new AlphaColor(0, 0, 0, Alpha);
             //Square con colores
             Square c1 = new Square(backgroundColor, foregroundColor, side);
             AlphaColor ac1 = new AlphaColor(red, green, blue, Alpha);
@@ -68,7 +70,7 @@ public class Application {
                 System.out.printf("L'area del Cuadrat es: %.2f %n", c1.getArea());
                 System.out.printf("El perimetre del Cuadrat es: %.2f %n%n", c1.getPerimeter());
                 System.out.printf("Background: %s %n", c1.getBackgroundColor().toHexString());
-                System.out.printf("Foreground: %s %n%n", c1.getForegroundColor().toHexString());
+                System.out.printf("Foreground: %s %n", c1.getForegroundColor().toHexString());
                 System.out.printf("%nContador: %d %n%n", c1.getCounter());
                 
                 System.out.printf("%s %n", ac1.toRGBString());
@@ -85,14 +87,14 @@ public class Application {
         
         //Variables Alpha/Color
         int red=80, green=90, blue=100;
-        double Alpha;
-        Color backgroundColor = new Color(255, 255, 255);
-        Color foregroundColor = new Color(0, 0, 0);
-        
+
+            //Pide el diametro
             System.out.println("Digam una mida del diametre: ");
             diametro = input.nextDouble();
- 
-            
+            //Background i Foreground con Alpha
+            AlphaColor backgroundColor = new AlphaColor(255, 255, 255, 0.6);
+            AlphaColor foregroundColor = new AlphaColor(0, 0, 0, 0.5);
+            //Crea circulo y un alphacolor
             Cercle cir1 = new Cercle(backgroundColor, foregroundColor, diametro, pi);
              AlphaColor ac2 = new AlphaColor(red, green, blue);
              
@@ -100,7 +102,7 @@ public class Application {
                 System.out.printf("L'area del Cercle es: %.2f %n", cir1.getArea());
                 System.out.printf("El perimetre del Cercle es: %.2f %n%n", cir1.getPerimeter());
                 System.out.printf("Background: %s %n", cir1.getBackgroundColor().toHexString());
-                System.out.printf("Foreground: %s %n%n", cir1.getForegroundColor().toHexString());
+                System.out.printf("Foreground: %s %n", cir1.getForegroundColor().toHexString());
                 System.out.printf("%nContador: %d %n%n", cir1.getCounter());
                 
                 System.out.printf("%s %n", ac2.toRGBString());
@@ -117,8 +119,6 @@ public class Application {
         //Variables Alpha/Color
         int red=50, green=60, blue=70;
         double Alpha;
-        Color backgroundColor = new Color(255, 255, 255);
-        Color foregroundColor = new Color(0, 0, 0);
         
             System.out.printf("%nDigam una mida de l'altura: ");
             altura = input.nextDouble();
@@ -127,7 +127,10 @@ public class Application {
             //Dada AlphaColor 
             System.out.printf("%nDigam un nivell de transparencia [0. Opac / 1. Transparent]: ");
             Alpha = input.nextDouble();
-            
+            //Background i Foreground con Alpha
+            AlphaColor backgroundColor = new AlphaColor(255, 255, 255, Alpha);
+            AlphaColor foregroundColor = new AlphaColor(0, 0, 0, Alpha);
+            //Crea un rectangulo y un AlphaColor
             Rectangle rec1 = new Rectangle(base, altura);
              AlphaColor ac3 = new AlphaColor(red, green, blue, Alpha);
              
@@ -136,7 +139,7 @@ public class Application {
                 System.out.printf("L'area del Rectangle es: %.2f %n", rec1.getArea());
                 System.out.printf("El perimetre del Rectangle es: %.2f %n%n", rec1.getPerimeter());
                 System.out.printf("Background: %s %n", rec1.getBackgroundColor().toHexString());
-                System.out.printf("Foreground: %s %n%n", rec1.getForegroundColor().toHexString());
+                System.out.printf("Foreground: %s %n", rec1.getForegroundColor().toHexString());
                 System.out.printf("%nContador: %d %n%n", rec1.getCounter());
                 
                 System.out.printf("%s %n", ac3.toRGBString());
@@ -153,17 +156,17 @@ public class Application {
             //Variables Alpha/Color
             int red=20, green=30, blue=40;
             double Alpha;
-            Color backgroundColor = new Color(255, 255, 255);
-            Color foregroundColor = new Color(0, 0, 0);
-            
             System.out.printf("%nDigam una mida del radi: ");
             radi = input.nextDouble();
             //Dada AlphaColor 
             System.out.printf("%nDigam un nivell de transparencia [0. Opac / 1. Transparent]: ");
             Alpha = input.nextDouble();
-            
+            //Background i Foreground con Alpha
+            AlphaColor backgroundColor = new AlphaColor(255, 255, 255, Alpha);
+            AlphaColor foregroundColor = new AlphaColor(0, 0, 0, Alpha);
+            //Crea una esfera y un alphacolor
             Sphere s1 = new Sphere(radi, pi);
-             AlphaColor ac4 = new AlphaColor(red, green, blue, Alpha);
+            AlphaColor ac4 = new AlphaColor(red, green, blue, Alpha);
              
                 System.out.printf("%nEl radi de la Esfera es: %.2f %n", s1.getRadi());
                 System.out.printf("El volumen de la Esfera es: %.2f %n%n", s1.getVolumen());

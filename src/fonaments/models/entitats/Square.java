@@ -28,10 +28,10 @@ public class Square extends Shape {
     //<editor-fold defaultstate="collapsed" desc="Constructores">
             
             public Square(double side){
-                this(new Color(Color.MAX_VALUE, Color.MAX_VALUE, Color.MAX_VALUE), new Color(Color.MIN_VALUE, Color.MIN_VALUE, Color.MIN_VALUE), side);
+                this(new AlphaColor(Color.MAX_VALUE, Color.MAX_VALUE, Color.MAX_VALUE), new AlphaColor(Color.MIN_VALUE, Color.MIN_VALUE, Color.MIN_VALUE), side);
             }
             
-            public Square(Color backgroundColor, Color foregroundColor, double side){
+            public Square(AlphaColor backgroundColor, AlphaColor foregroundColor, double side){
                 super(backgroundColor, foregroundColor);
                 this.setSide(side);
             }

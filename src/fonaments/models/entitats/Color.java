@@ -5,7 +5,7 @@ package fonaments.models.entitats;
 
 import java.util.Random;
 
-public class Color {
+public abstract class Color {
 //<editor-fold defaultstate="collapsed" desc="Atributs">
     private int red;
     private int green;
@@ -79,7 +79,7 @@ public class Color {
                         getRed(), getGreen(), getBlue());
         }
         public String toHexString(){
-            return toHexString(true);
+            return toHexString(false);
         }
     //</editor-fold>
     //<editor-fold defaultstate="collapsed" desc="Metodes Estatics">
@@ -94,7 +94,7 @@ public class Color {
                 throw new IllegalArgumentException(
                         String.format("El text %s no te format hexadecimal", color));
             }
-            return new Color(Integer.parseInt(color.substring(1, 3), 16),
+            return new AlphaColor(Integer.parseInt(color.substring(1, 3), 16),
                             Integer.parseInt(color.substring(3, 5), 16),
                             Integer.parseInt(color.substring(5, 7), 16));
         }
@@ -104,7 +104,7 @@ public class Color {
         public static Color getRandom(){
             Random aleatori = new Random();
 
-            return new Color(aleatori.nextInt(256), aleatori.nextInt(256), aleatori.nextInt(256));
+            return new AlphaColor(aleatori.nextInt(256), aleatori.nextInt(256), aleatori.nextInt(256));
         }
     //</editor-fold>
 //</editor-fold>

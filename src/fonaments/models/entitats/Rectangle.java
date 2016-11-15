@@ -34,11 +34,11 @@ public class Rectangle extends Shape{
     //<editor-fold defaultstate="collapsed" desc="Constructores">
             
             public Rectangle(double base, double altura){
-               this(new Color(Color.MAX_VALUE, Color.MAX_VALUE, Color.MAX_VALUE), new Color(Color.MIN_VALUE, Color.MIN_VALUE, Color.MIN_VALUE), base, altura);
+               this(new AlphaColor(Color.MAX_VALUE, Color.MAX_VALUE, Color.MAX_VALUE), new AlphaColor(Color.MIN_VALUE, Color.MIN_VALUE, Color.MIN_VALUE), base, altura);
 
             }
             
-            public Rectangle(Color backgroundColor, Color foregroundColor, double base, double altura){
+            public Rectangle(AlphaColor backgroundColor, AlphaColor foregroundColor, double base, double altura){
                 super(backgroundColor, foregroundColor);
                 this.setBase(base);
                 this.setAltura(altura);
