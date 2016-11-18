@@ -45,7 +45,15 @@ public abstract class Shape {
         public static int getCounter(){
             return counter;
         }
+        
+        @Override
+        public String toString() {
+            return String.format("Color del fondo: %s %n Color del borde: %s %n", getBackgroundColor().toString(), getForegroundColor().toString()); //To change body of generated methods, choose Tools | Templates.
+        }
+        
     //</editor-fold>
 //</editor-fold>
+
+
 
 }

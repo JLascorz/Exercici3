@@ -51,6 +51,10 @@ public class Cercle extends Shape{
         public double getPerimeter(){
             return getDiametro() * getPi();
         }
+        @Override
+        public String toString() {
+            return String.format("%nDiametre: %.2f %nL'area del Cercle es: %.2f %nEl perimetre del Cercle es: %.2f %n %s %n", getDiametro(), getArea(), getPerimeter(), super.toString());
+        }
     //</editor-fold>
 
 //</editor-fold>

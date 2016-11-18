@@ -66,12 +66,8 @@ public class Application {
             //Square con colores
             Square c1 = new Square(backgroundColor, foregroundColor, side);
             AlphaColor ac1 = new AlphaColor(red, green, blue, Alpha);
-                System.out.printf("%nLado: %.2f %n", c1.getSide());
-                System.out.printf("L'area del Cuadrat es: %.2f %n", c1.getArea());
-                System.out.printf("El perimetre del Cuadrat es: %.2f %n%n", c1.getPerimeter());
-                System.out.printf("Background: %s %n", c1.getBackgroundColor().toHexString());
-                System.out.printf("Foreground: %s %n", c1.getForegroundColor().toHexString());
-                System.out.printf("%nContador: %d %n%n", c1.getCounter());
+                System.out.printf("%n %s %n", c1.toString());
+                System.out.printf("Contador: %d %n", c1.getCounter());
                 
                 System.out.printf("%s %n", ac1.toRGBString());
                 System.out.printf("%s %n", ac1.toHexString());
@@ -98,12 +94,8 @@ public class Application {
             Cercle cir1 = new Cercle(backgroundColor, foregroundColor, diametro, pi);
              AlphaColor ac2 = new AlphaColor(red, green, blue);
              
-                System.out.printf("%nEl diametre del Cercle es: %.2f %n", cir1.getDiametro());
-                System.out.printf("L'area del Cercle es: %.2f %n", cir1.getArea());
-                System.out.printf("El perimetre del Cercle es: %.2f %n%n", cir1.getPerimeter());
-                System.out.printf("Background: %s %n", cir1.getBackgroundColor().toHexString());
-                System.out.printf("Foreground: %s %n", cir1.getForegroundColor().toHexString());
-                System.out.printf("%nContador: %d %n%n", cir1.getCounter());
+                System.out.printf("%n %s %n", cir1.toString());
+                System.out.printf("Contador: %d %n", cir1.getCounter());
                 
                 System.out.printf("%s %n", ac2.toRGBString());
                 System.out.printf("%s %n", ac2.toHexString());
@@ -131,16 +123,11 @@ public class Application {
             AlphaColor backgroundColor = new AlphaColor(255, 255, 255, Alpha);
             AlphaColor foregroundColor = new AlphaColor(0, 0, 0, Alpha);
             //Crea un rectangulo y un AlphaColor
-            Rectangle rec1 = new Rectangle(base, altura);
+            Rectangle rec1 = new Rectangle(backgroundColor, foregroundColor, base, altura);
              AlphaColor ac3 = new AlphaColor(red, green, blue, Alpha);
              
-                System.out.printf("%nLa base del Rectangle es: %.2f %n", rec1.getBase());
-                System.out.printf("L'altura del Rectangle es: %.2f %n", rec1.getAltura());
-                System.out.printf("L'area del Rectangle es: %.2f %n", rec1.getArea());
-                System.out.printf("El perimetre del Rectangle es: %.2f %n%n", rec1.getPerimeter());
-                System.out.printf("Background: %s %n", rec1.getBackgroundColor().toHexString());
-                System.out.printf("Foreground: %s %n", rec1.getForegroundColor().toHexString());
-                System.out.printf("%nContador: %d %n%n", rec1.getCounter());
+                System.out.printf("%n %s %n", rec1.toString());
+                System.out.printf("Contador: %d %n", rec1.getCounter());
                 
                 System.out.printf("%s %n", ac3.toRGBString());
                 System.out.printf("%s %n", ac3.toHexString());
@@ -165,14 +152,11 @@ public class Application {
             AlphaColor backgroundColor = new AlphaColor(255, 255, 255, Alpha);
             AlphaColor foregroundColor = new AlphaColor(0, 0, 0, Alpha);
             //Crea una esfera y un alphacolor
-            Sphere s1 = new Sphere(radi, pi);
+            Sphere s1 = new Sphere(backgroundColor, foregroundColor, radi, pi);
             AlphaColor ac4 = new AlphaColor(red, green, blue, Alpha);
              
-                System.out.printf("%nEl radi de la Esfera es: %.2f %n", s1.getRadi());
-                System.out.printf("El volumen de la Esfera es: %.2f %n%n", s1.getVolumen());
-                System.out.printf("Background: %s %n", s1.getBackgroundColor().toHexString());
-                System.out.printf("Foreground: %s %n%n", s1.getForegroundColor().toHexString());
-                System.out.printf("%nContador: %d %n%n", s1.getCounter());
+                System.out.printf("%n %s %n", s1.toString());
+                System.out.printf("Contador: %d %n", s1.getCounter());
                 
                 System.out.printf("%s %n", ac4.toRGBString());
                 System.out.printf("%s %n", ac4.toHexString());

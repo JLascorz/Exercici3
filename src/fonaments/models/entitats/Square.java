@@ -44,6 +44,11 @@ public class Square extends Shape {
         public double getPerimeter(){
             return getSide() * 4;
         }
+        @Override
+        public String toString() {
+            return String.format("%nLado: %.2f %nL'area del Cuadrat es: %.2f %nEl perimetre del Cuadrat es: %.2f %n %s %n", getSide(), getArea(), getPerimeter(), super.toString());
+        }
+
     //</editor-fold>
 //</editor-fold>
 

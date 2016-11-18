@@ -46,6 +46,10 @@ public class Sphere extends Shape {
         public double getVolumen(){
             return (4 * getPi() * Math.pow(getRadi(), 3))/3;
         }
+        @Override
+        public String toString() {
+            return String.format("%nRadi: %.2f %nPi: %.2f %nVolumne: %.2f %n %s %n", getRadi(), getPi(), getVolumen(), super.toString());
+        }
     //</editor-fold>
 
 //</editor-fold>

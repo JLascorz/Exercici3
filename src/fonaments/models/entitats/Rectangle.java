@@ -51,6 +51,10 @@ public class Rectangle extends Shape{
         public double getPerimeter(){
             return (2 * getBase()) + (2 * getAltura());
         }
+        @Override
+        public String toString() {
+            return String.format("%nBase: %.2f %nAltura: %.2f %nPerimetre: %.2f %nArea: %.2f %n %s %n", getBase(), getAltura(), getPerimeter(), getArea(), super.toString());
+        }
     //</editor-fold>
 
 //</editor-fold>

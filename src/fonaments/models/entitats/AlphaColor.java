@@ -54,6 +54,11 @@ public class AlphaColor extends Color{
         public String toHexString(){
             return toHexString(true);
         }
+        
+        @Override
+        public String toString() {
+            return String.format("%s %n %s", toHexString(), toRGBString()); //To change body of generated methods, choose Tools | Templates.
+        }
     //</editor-fold>
 
 //</editor-fold>
